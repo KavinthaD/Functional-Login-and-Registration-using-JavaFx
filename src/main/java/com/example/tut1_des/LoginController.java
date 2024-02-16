@@ -70,7 +70,7 @@ public class LoginController {
         com.example.tut1_des.SignupController otherController = loader.getController();
         otherController.setSignUpStage(signUpStage);
     }
-    private boolean validateCredentials(String username, String password) {
+    private boolean validateCredentials(String username, String password) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader("user_inputs.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -86,9 +86,6 @@ public class LoginController {
                     }
                 }
             }
-        }
-        catch (IOException e) {
-            e.printStackTrace();
         }
         return false; // Credentials not found or error occurred
     }
