@@ -102,14 +102,6 @@ public class SignupController implements Initializable {
         Parent submitRoot = loader.load();
         Scene scene = new Scene(submitRoot);
 
-        String username = usernameTextField.getText();
-
-        if (!isUsernameUnique(username)) {
-            // Username already exists, handle accordingly (show message, etc.)
-            System.out.println("Username already exists!");
-            return; // Exit method without appending data
-        }
-
         try (FileWriter writer = new FileWriter("user_inputs.txt",true)) {
             writer.write("First Name: " + firstNameTextField.getText() + "\n");
             writer.write("Last Name: " + lastNameTextField.getText() + "\n");
@@ -123,6 +115,14 @@ public class SignupController implements Initializable {
             writer.write("Username: " + usernameTextField.getText() + "\n");
             writer.write("Password: " + passwordTextField.getText() + "\n");
             // You can write additional fields if needed
+
+            String username = usernameTextField.getText();
+
+            if (!isUsernameUnique(username)) {
+                // Username already exists, handle accordingly (show message, etc.)
+                System.out.println("Username already exists!");
+                return; // Exit method without appending data
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

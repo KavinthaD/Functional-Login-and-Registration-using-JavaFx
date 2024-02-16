@@ -77,7 +77,12 @@ public class LoginController {
                 if (line.startsWith("Username: ")) {
                     String existingUsername = line.substring("Username: ".length()).trim();
                     if (existingUsername.equals(username)) {
-                        return true; // match with existing username
+                        if (line.startsWith("Password: ")) {
+                            String existingPassword = line.substring("Password: ".length()).trim();
+                            if (existingPassword.equals(password)) {
+                                return true; // match with existing username
+                            }
+                        }
                     }
                 }
             }

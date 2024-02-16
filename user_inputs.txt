@@ -7,16 +7,5 @@ Civil Status: null
 Country: 
 Email: 
 Phone Number: 
-Username: Kavi
-Password: 1234
-First Name: 
-Last Name: 
-Age: null
-Birthday: null
-Gender: null
-Civil Status: null
-Country: 
-Email: 
-Phone Number: 
-Username: kavi
-Password: 1234
+Username: w
+Password: 2
