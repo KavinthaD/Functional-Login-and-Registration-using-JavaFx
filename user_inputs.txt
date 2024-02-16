@@ -20,3 +20,25 @@ Email:
 Phone Number: 
 Username: Kavi
 Password: 1234
+First Name: 
+Last Name: 
+Age: null
+Birthday: null
+Gender: null
+Civil Status: null
+Country: 
+Email: 
+Phone Number: 
+Username: Kavi
+Password: 1234
+First Name: 
+Last Name: 
+Age: null
+Birthday: null
+Gender: null
+Civil Status: null
+Country: 
+Email: 
+Phone Number: 
+Username: Nipu
+Password: 1234
