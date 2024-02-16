@@ -12,62 +12,55 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="360.0" minWidth="360.0"
-            prefHeight="360.0" prefWidth="515.0" style="-fx-background-color: #d5f5d5;"
-            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.tut1_des.LoginController">
-   <StackPane layoutX="-73.0" layoutY="331.0" prefHeight="360.0" prefWidth="515.0"/>
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="360.0" minWidth="360.0" prefHeight="360.0" prefWidth="515.0" style="-fx-background-color: #d5f5d5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tut1_des.LoginController">
+   <StackPane layoutX="-73.0" layoutY="331.0" prefHeight="360.0" prefWidth="515.0" />
    <ImageView fitHeight="394.0" fitWidth="619.0" layoutX="-31.0" layoutY="-30.0" opacity="0.23">
-      <Image url="@../../../../../../../../Pictures/wallpapers/cyberpunk-2077-city-thumb.jpg"/>
+      <Image url="@../../../cyberpunk-2077-city-thumb.jpg" />
    </ImageView>
    <Text layoutX="73.0" layoutY="151.0" stroke="#eb0d0d" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name:">
       <font>
-         <Font name="Comic Sans MS" size="14.0"/>
+         <Font name="Comic Sans MS" size="14.0" />
       </font>
    </Text>
    <Text layoutX="207.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
       <font>
-         <Font name="Comic Sans MS Bold" size="24.0"/>
+         <Font name="Comic Sans MS Bold" size="24.0" />
       </font>
    </Text>
-   <PasswordField fx:id="loginPasswordField" layoutX="176.0" layoutY="174.0"
-                  style="-fx-background-color: #e1e3e1; -fx-border-color: #89a38c; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+   <PasswordField fx:id="loginPasswordField" layoutX="176.0" layoutY="174.0" style="-fx-background-color: #e1e3e1; -fx-border-color: #89a38c; -fx-background-radius: 10px; -fx-border-radius: 10px;">
       <font>
-         <Font name="Comic Sans MS" size="12.0"/>
+         <Font name="Comic Sans MS" size="12.0" />
       </font>
       <effect>
          <DropShadow>
             <color>
-               <Color opacity="0.45038166642189026"/>
+               <Color opacity="0.45038166642189026" />
             </color>
          </DropShadow>
       </effect>
    </PasswordField>
-   <TextField fx:id="loginUsernameField" layoutX="176.0" layoutY="134.0" prefHeight="25.0" prefWidth="164.0"
-              style="-fx-background-color: #e1e3e1; -fx-border-color: #89a38c; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+   <TextField fx:id="loginUsernameField" layoutX="176.0" layoutY="134.0" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #e1e3e1; -fx-border-color: #89a38c; -fx-border-radius: 10px; -fx-background-radius: 10px;">
       <effect>
          <DropShadow>
             <color>
-               <Color opacity="0.4236641228199005"/>
+               <Color opacity="0.4236641228199005" />
             </color>
          </DropShadow>
       </effect>
    </TextField>
-   <Button layoutX="197.0" layoutY="227.0" mnemonicParsing="false" onAction="#SignInButtonClick"
-           style="-fx-background-color: #94f29d; -fx-border-color: #89a38c; -fx-border-radius: 10px;" text="Sign in">
+   <Button layoutX="197.0" layoutY="227.0" mnemonicParsing="false" onAction="#SignInButtonClick" style="-fx-background-color: #94f29d; -fx-border-color: #89a38c; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Sign in">
       <font>
-         <Font name="Comic Sans MS" size="12.0"/>
+         <Font name="Comic Sans MS" size="12.0" />
       </font>
    </Button>
-   <Button layoutX="258.0" layoutY="227.0" mnemonicParsing="false" onAction="#SignUpButtonClick"
-           style="-fx-background-color: #94f29d; -fx-border-color: #89a38c; -fx-border-radius: 10px;" text="Sign up">
+   <Button layoutX="258.0" layoutY="227.0" mnemonicParsing="false" onAction="#SignUpButtonClick" style="-fx-background-color: #94f29d; -fx-border-color: #89a38c; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Sign up">
       <font>
-         <Font name="Comic Sans MS" size="12.0"/>
+         <Font name="Comic Sans MS" size="12.0" />
       </font>
    </Button>
    <Text layoutX="85.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
       <font>
-         <Font name="Comic Sans MS" size="14.0"/>
+         <Font name="Comic Sans MS" size="14.0" />
       </font>
    </Text>
 </AnchorPane>
