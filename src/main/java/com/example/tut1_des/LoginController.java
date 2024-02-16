@@ -73,17 +73,22 @@ public class LoginController {
     private boolean validateCredentials(String username, String password) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader("user_inputs.txt"))) {
             String line;
+            String existingPassword = null;
+            String existingUsername = null;
             while ((line = reader.readLine()) != null) {
                 if (line.startsWith("Username: ")) {
-                    String existingUsername = line.substring("Username: ".length()).trim();
-                    if (existingUsername.equals(username)) {
-                        if (line.startsWith("Password: ")) {
-                            String existingPassword = line.substring("Password: ".length()).trim();
-                            if (existingPassword.equals(password)) {
-                                return true; // match with existing username
-                            }
-                        }
-                    }
+                    existingUsername = line.substring("Username: ".length()).trim();
+                } else if (line.startsWith("Password: ")) {
+                    existingPassword = line.substring("Password: ".length()).trim();
+                }
+            }
+            assert existingPassword != null;
+            if (existingPassword.equals(password)) {
+                assert existingUsername != null;
+                if (existingUsername.equals(username)) {
+                    return true; // match with existing username
+
+
                 }
             }
         }

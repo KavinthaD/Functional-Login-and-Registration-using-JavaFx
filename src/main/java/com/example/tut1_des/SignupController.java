@@ -1,10 +1,7 @@
 package com.example.tut1_des;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -98,11 +95,8 @@ public class SignupController implements Initializable {
     @FXML
     private void submitButtonClick() throws IOException {
         System.out.println("submit button clicked.");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("signup.fxml"));
-        Parent submitRoot = loader.load();
-        Scene scene = new Scene(submitRoot);
 
-        try (FileWriter writer = new FileWriter("user_inputs.txt",true)) {
+        try (FileWriter writer = new FileWriter("user_inputs.txt", true)) {
             writer.write("First Name: " + firstNameTextField.getText() + "\n");
             writer.write("Last Name: " + lastNameTextField.getText() + "\n");
             writer.write("Age: " + ageChoose.getValue() + "\n");
@@ -123,19 +117,15 @@ public class SignupController implements Initializable {
                 System.out.println("Username already exists!");
                 return; // Exit method without appending data
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        signUpStage.close();
 
+            signUpStage.close();
+
+        }
     }
 
     @FXML
-    private void clearButtonClick() throws IOException {
+    private void clearButtonClick() {
         System.out.println("clear button clicked.");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("signup.fxml"));
-        Parent clearRoot = loader.load();
-        Scene scene = new Scene(clearRoot);
 
         firstNameTextField.clear();
         lastNameTextField.clear();
